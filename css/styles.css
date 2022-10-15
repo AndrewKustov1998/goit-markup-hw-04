@@ -10,6 +10,7 @@
 
   --hero-background-color: #2f303a;
   --button-color: #f5f4fa;
+  --icon-color: #afb1b8;
 }
 
 body {
@@ -68,6 +69,7 @@ ul {
 
 .section-title {
   margin-bottom: 50px;
+  text-align: center;
 
   font-weight: 700;
   font-size: 36px;
@@ -169,15 +171,30 @@ ul {
   color: var(--accent-color);
 }
 
+.mail-tel-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  fill: var(--secondary-text-color);
+}
+
+.mail-tel-item:hover,
+.mail-tel-item:focus {
+  fill: var(--accent-color);
+}
 /* ---------------------- Hero section ---------------------- */
+
 .hero {
   padding-top: 200px;
   padding-bottom: 200px;
+  margin: 0 auto;
+  max-width: 1600px;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4) rgba(47, 48, 58, 0.4));
+  background-image: url(../images/hero-overlay.jpg);
   background-color: var(--hero-background-color);
 }
 
 .hero-title {
-  text-align: center;
   margin: 0 auto;
   margin-bottom: 30px;
 
@@ -217,6 +234,18 @@ ul {
   padding-bottom: 0;
 }
 
+.advantage-icon-block {
+  width: 270px;
+  height: 120px;
+  background-color: var(--button-color);
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+.advantage-icon {
+  margin: 25px 100px;
+}
+
 .advantages-li-title {
   margin-bottom: 10px;
 
@@ -247,26 +276,20 @@ ul {
 }
 
 /* ---------------------- What we are doing section ---------------------- */
-.what-we-doing-title {
-  text-align: center;
-}
 
 .what-we-doing-list {
   display: flex;
   gap: 30px;
 }
+
 /* ---------------------- Our team section ---------------------- */
+
 .our-team-section {
   background-color: var(--button-color);
 }
 
 .our-team-section li {
-  padding-bottom: 30px;
   background-color: var(--primary-white-color);
-}
-
-.our-team-title {
-  text-align: center;
 }
 
 .our-team-list {
@@ -288,6 +311,7 @@ ul {
 }
 
 .our-team-position {
+  margin-bottom: 16px;
   text-align: center;
 
   font-size: 16px;
@@ -296,9 +320,69 @@ ul {
   color: var(--secondary-text-color);
 }
 
+.social-list {
+  display: flex;
+  padding-bottom: 30px;
+  gap: 10px;
+  justify-content: center;
+}
+
+.social-item-link {
+  display: flex;
+  align-items: center;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  fill: var(--icon-color);
+
+  cursor: pointer;
+}
+
+.social-item-link:hover,
+.social-item-link:focus {
+  fill: var(--primary-white-color);
+  background-color: var(--accent-color);
+}
+
+/* ---------------------- Regular clients section ---------------------- */
+
+.regular-clients-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.regular-clients-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.regular-clients-link {
+  fill: var(--icon-color);
+}
+
+.regular-clients-item:hover .regular-clients-link,
+.regular-clients-item:focus .regular-clients-link {
+  fill: var(--accent-color);
+}
+
+.regular-clients-item:hover,
+.regular-clients-item:focus {
+  border: 1px solid var(--accent-color);
+}
+
 /* ---------------------- !!! portfolio.html !!! ---------------------- */
 
 /* ---------------------- Completed projects section ---------------------- */
+
 .filter {
   display: flex;
   gap: 8px;
