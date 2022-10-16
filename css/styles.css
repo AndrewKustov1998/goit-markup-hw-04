@@ -123,11 +123,6 @@ ul {
   margin-right: 0;
 }
 
-/* Check why this method is not working */
-/* .site-nav .item:not(last-child) {
-  margin-right: 50px;
-} */
-
 .site-nav .link {
   display: block;
   padding-top: 32px;
@@ -297,6 +292,12 @@ ul {
   gap: 30px;
 }
 
+.our-team-list .item {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
 .employee-img {
   margin-bottom: 30px;
 }
@@ -366,6 +367,11 @@ ul {
 }
 
 .regular-clients-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
   fill: var(--icon-color);
 }
 
@@ -405,11 +411,10 @@ ul {
 
 .filer-button:hover,
 .filer-button:focus {
-  color: var(--accent-color);
-}
-
-.filer-button.current {
-  color: var(--accent-color);
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .projects-list {
@@ -445,6 +450,12 @@ ul {
   border-right: 1px solid var(--projects-border-color);
 
   padding: 20px 24px;
+}
+
+.projects-list .item:hover {
+  cursor: pointer;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 /* ---------------------- Footer ---------------------- */
@@ -491,4 +502,47 @@ ul {
 .mail {
   display: inline-block;
   margin-bottom: 9px;
+}
+
+.footer-socials-header {
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  color: var(--primary-white-color);
+}
+
+.footer-social-list {
+  display: flex;
+  padding-bottom: 30px;
+  gap: 10px;
+}
+
+.footer-social-link {
+  display: flex;
+  align-items: center;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  fill: var(--primary-white-color);
+
+  cursor: pointer;
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: var(--accent-color);
+}
+
+.footer-flex {
+  display: flex;
+}
+
+.footer-join-us {
+  margin: 12px auto 100px 70px;
 }
