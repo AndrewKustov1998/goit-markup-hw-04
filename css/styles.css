@@ -184,14 +184,15 @@ ul {
   padding-bottom: 200px;
   margin: 0 auto;
   max-width: 1600px;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4) rgba(47, 48, 58, 0.4));
-  background-image: url(../images/hero-overlay.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/hero-overlay.jpg');
   background-color: var(--hero-background-color);
 }
 
 .hero-title {
   margin: 0 auto;
   margin-bottom: 30px;
+  text-align: center;
 
   max-width: 696px;
   font-weight: 900;
@@ -361,8 +362,6 @@ ul {
 
   width: 170px;
   height: 92px;
-  border: 1px solid var(--icon-color);
-  border-radius: 4px;
   cursor: pointer;
 }
 
@@ -370,18 +369,17 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
+
   width: 100%;
   height: 100%;
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
   fill: var(--icon-color);
 }
 
-.regular-clients-item:hover .regular-clients-link,
-.regular-clients-item:focus .regular-clients-link {
+.regular-clients-link:hover,
+.regular-clients-link:focus {
   fill: var(--accent-color);
-}
-
-.regular-clients-item:hover,
-.regular-clients-item:focus {
   border: 1px solid var(--accent-color);
 }
 
@@ -541,8 +539,6 @@ ul {
 
 .footer-flex {
   display: flex;
-}
-
-.footer-join-us {
-  margin: 15px auto 100px 70px;
+  align-items: baseline;
+  gap: 70px;
 }
